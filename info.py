@@ -23,7 +23,7 @@ USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), Tru
 
 PICS = (environ.get('PICS', 'https://te.legra.ph/file/a489f738e25db9120c343.jpg https://te.legra.ph/file/57ae3326c54e8f0a28f6f.jpg https://te.legra.ph/file/93c04c72fb5862cdb18dd.jpg https://te.legra.ph/file/cbb98a1184c78767f44d9.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/93c04c72fb5862cdb18dd.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
+MELCOW_VID = environ.get("MELCOW_VID", "https://te.legra.ph/file/13173a59f9a858e394d3d.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
 
 # Admins, Channels & Users
@@ -58,8 +58,8 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+GOFte-Rz2tcxODg1')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+mCMdCb_ymAowZmNl')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/infinity_Lk')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/infinityworldlk')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'DQ_The_File_Donor_Support')
