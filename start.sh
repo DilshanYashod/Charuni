@@ -8,5 +8,5 @@ else
 fi
 cd /Charuni
 pip3 install -U -r requirements.txt
-echo "Starting charuni...."
+echo "Starting charu-Lk-bot...."
 python3 bot.py
