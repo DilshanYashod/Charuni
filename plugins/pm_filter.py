@@ -243,8 +243,8 @@ async def next_page(bot, query):
                 ],
             )
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#files#{offset}#{req}"),
-        InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{req}")
+        InlineKeyboardButton(""🌱 ꜱᴇɴᴅ ᴀʟʟ ᴜꜱᴇʀ 🌱", callback_data=f"send_fall#files#{offset}#{req}"),
+        InlineKeyboardButton("🦠 ʟᴀɴɢᴜᴀɢᴇꜱ 🦠", callback_data=f"select_lang#{req}")
     ])
     btn.insert(0, [
         InlineKeyboardButton("♂️ ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ ♂️", url=f"https://t.me/infinity_lk")
@@ -728,10 +728,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             reply_markup=InlineKeyboardMarkup(
                                 [
                                 [
-                                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                                InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                                InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
+                                InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/nimsar_a")
+                                InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/nimsar_a")
                                 ]
                                 ]
                             )
@@ -801,10 +801,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                  InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                  InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                  InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
+                  InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
                ],[
-                  InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/nimsar_a")
+                  InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/nimsar_a")
                  ]
                 ]
             )
