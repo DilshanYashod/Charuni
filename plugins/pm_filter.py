@@ -247,7 +247,7 @@ async def next_page(bot, query):
         InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{req}")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("♂️ ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ ♂️", url=f"https://t.me/sinhalafilx")
+        InlineKeyboardButton("♂️ ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ ♂️", url=f"https://t.me/infinity_lk")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -360,7 +360,7 @@ async def language_check(bot, query):
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("", url=f"https://t.me/sinhalafilx")
+            InlineKeyboardButton("", url=f"https://t.me/infinity_lk")
         ])
 
         if offset != "":
@@ -1146,12 +1146,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('✨️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔰 ʜᴇʟʟᴏ 🔰', callback_data="owner_info"),
-                    InlineKeyboardButton('🍁 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ 🌿', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('🌸 ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('🍀 ᴀʙᴏᴜᴛ ᴍᴇ', callback_data='about')
+                    InlineKeyboardButton('🔋 ʜᴇʟᴘꜱ 🔋', callback_data='help'),
+                    InlineKeyboardButton(''💌 ɪᴛᴢ'ᴍᴇ 💌', callback_data='about')
                 ],[
-                    InlineKeyboardButton('📍 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📍', url=CHNL_LNK)
+                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1628,7 +1628,7 @@ async def auto_filter(client, msg, spoll=False):
     ])
 
     btn.insert(0, [
-        InlineKeyboardButton("♂️ ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ ♂️", url=f"https://t.me/sinhalafilx")
+        InlineKeyboardButton("♂️ ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ ♂️", url=f"https://t.me/infinity_lk")
     ])
 
     if offset != "":
