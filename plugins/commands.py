@@ -25,12 +25,12 @@ async def start(client, message):
                     InlineKeyboardButton('✨️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔰 ʜᴇʟʟᴏ 🔰', callback_data="owner_info"),
-                    InlineKeyboardButton('🍁 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ 🌿', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('🌸 ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('🍀 ᴀʙᴏᴜᴛ ᴍᴇ', callback_data='about')
+                    InlineKeyboardButton('🔋 ʜᴇʟᴘꜱ 🔋', callback_data='help'),
+                    InlineKeyboardButton('💌 ɪᴛᴢ'ᴍᴇ 💌', callback_data='about')
                 ],[
-                    InlineKeyboardButton('📍 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📍', url=CHNL_LNK)
+                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -53,12 +53,12 @@ async def start(client, message):
                     InlineKeyboardButton('✨️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔰 ʜᴇʟʟᴏ 🔰', callback_data="owner_info"),
-                    InlineKeyboardButton('🍁 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ 🌿', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('🌸 ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('🍀 ᴀʙᴏᴜᴛ ᴍᴇ', callback_data='about')
+                    InlineKeyboardButton('🔋 ʜᴇʟᴘꜱ 🔋', callback_data='help'),
+                    InlineKeyboardButton('💌 ɪᴛᴢ'ᴍᴇ 💌', callback_data='about')
                 ],[
-                    InlineKeyboardButton('📍 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📍', url=CHNL_LNK)
+                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -101,12 +101,12 @@ async def start(client, message):
                     InlineKeyboardButton('✨️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('🔰 ʜᴇʟʟᴏ 🔰', callback_data="owner_info"),
-                    InlineKeyboardButton('🍁 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=GRP_LNK)
+                    InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ 🌿', url=GRP_LNK)
                 ],[
-                    InlineKeyboardButton('🌸 ʜᴇʟᴘ', callback_data='help'),
-                    InlineKeyboardButton('🍀 ᴀʙᴏᴜᴛ ᴍᴇ', callback_data='about')
+                    InlineKeyboardButton('🔋 ʜᴇʟᴘꜱ 🔋', callback_data='help'),
+                    InlineKeyboardButton('💌 ɪᴛᴢ'ᴍᴇ 💌', callback_data='about')
                 ],[
-                    InlineKeyboardButton('📍 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📍', url=CHNL_LNK)
+                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
