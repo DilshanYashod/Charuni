@@ -243,7 +243,7 @@ async def next_page(bot, query):
                 ],
             )
     btn.insert(0, [
-        InlineKeyboardButton(""🌱 ꜱᴇɴᴅ ᴀʟʟ ᴜꜱᴇʀ 🌱", callback_data=f"send_fall#files#{offset}#{req}"),
+        InlineKeyboardButton("🌱 ꜱᴇɴᴅ ᴀʟʟ ᴜꜱᴇʀ 🌱", callback_data=f"send_fall#files#{offset}#{req}"),
         InlineKeyboardButton("🦠 ʟᴀɴɢᴜᴀɢᴇꜱ 🦠", callback_data=f"select_lang#{req}")
     ])
     btn.insert(0, [
