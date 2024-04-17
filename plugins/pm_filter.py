@@ -158,14 +158,14 @@ async def next_page(bot, query):
                 [
                     InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
                     InlineKeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
-                    InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                    InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )
         else:
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰 ᴍᴏᴠɪᴇ 🔰', 'minfo'),
-                    InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                    InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )            
     except KeyError:
@@ -174,7 +174,7 @@ async def next_page(bot, query):
             [
                 InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
                 InlineKeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
-                InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
             ]
         )
     try:
@@ -332,7 +332,7 @@ async def language_check(bot, query):
                     [
                         InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
                         InlineKeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
-                        InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                        InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                     ]
                 )
 
@@ -340,7 +340,7 @@ async def language_check(bot, query):
                 btn.insert(0, 
                     [
                         InlineKeyboardButton(f'🔰 ᴍᴏᴠɪᴇ 🔰', 'minfo'),
-                        InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                        InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                     ]
                 )
                     
@@ -350,13 +350,13 @@ async def language_check(bot, query):
                 [
                     InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
                     InlineKeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
-                    InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ💌', 'sinfo')
+                    InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )
         
         btn.insert(0, [
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{userid}"),
-            InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{userid}")
+            InlineKeyboardButton("🌱 ꜱᴇɴᴅ ᴀʟʟ ᴜꜱᴇʀ 🌱", callback_data=f"send_fall#{pre}#{0}#{userid}"),
+            InlineKeyboardButton("🦠 ʟᴀɴɢᴜᴀɢᴇꜱ 🦠", callback_data=f"select_lang#{userid}")
         ])
 
         btn.insert(0, [
@@ -1602,14 +1602,14 @@ async def auto_filter(client, msg, spoll=False):
                 [
                     InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
                     InlineKeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
-                    InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                    InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )
         else:
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰 ᴍᴏᴠɪᴇ 🔰', 'minfo'),
-                    InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                    InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )       
     except KeyError:
@@ -1618,13 +1618,13 @@ async def auto_filter(client, msg, spoll=False):
             [
                 InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
                 InlineKeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
-                InlineKeyboardButton(f'💌 ꜱᴇʀɪᴇꜱ 💌', 'sinfo')
+                InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
             ]
         )
 
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}"),
-        InlineKeyboardButton("! Lᴀɴɢᴜᴀɢᴇs !", callback_data=f"select_lang#{message.from_user.id}")
+        InlineKeyboardButton("🌱 ꜱᴇɴᴅ ᴀʟʟ ᴜꜱᴇʀ 🌱", callback_data=f"send_fall#{pre}#{0}#{message.from_user.id}"),
+        InlineKeyboardButton("🦠 ʟᴀɴɢᴜᴀɢᴇꜱ 🦠", callback_data=f"select_lang#{message.from_user.id}")
     ])
 
     btn.insert(0, [
