@@ -24,13 +24,12 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('✨️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('⭕ ʙᴏᴛ ᴏᴡɴᴇʀ', callback_data="owner_info"),
+                    InlineKeyboardButton('🔰 ʜᴇʟʟᴏ 🔰', callback_data="owner_info"),
                     InlineKeyboardButton('🍁 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('🌸 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('🍀 ᴀʙᴏᴜᴛ ᴍᴇ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('ɪɴʟɪɴᴇ ꜱᴇᴀʀᴄʜ ♂️', switch_inline_query_current_chat=''),
                     InlineKeyboardButton('📍 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📍', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -53,13 +52,12 @@ async def start(client, message):
         buttons =  [[
                     InlineKeyboardButton('✨️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('⭕ ʙᴏᴛ ᴏᴡɴᴇʀ', callback_data="owner_info"),
+                    InlineKeyboardButton('🔰 ʜᴇʟʟᴏ 🔰', callback_data="owner_info"),
                     InlineKeyboardButton('🍁 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('🌸 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('🍀 ᴀʙᴏᴜᴛ ᴍᴇ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('ɪɴʟɪɴᴇ ꜱᴇᴀʀᴄʜ ♂️', switch_inline_query_current_chat=''),
                     InlineKeyboardButton('📍 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📍', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -102,13 +100,12 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('✨️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ✨️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('⭕ ʙᴏᴛ ᴏᴡɴᴇʀ', callback_data="owner_info"),
+                    InlineKeyboardButton('🔰 ʜᴇʟʟᴏ 🔰', callback_data="owner_info"),
                     InlineKeyboardButton('🍁 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=GRP_LNK)
                 ],[
                     InlineKeyboardButton('🌸 ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('🍀 ᴀʙᴏᴜᴛ ᴍᴇ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('ɪɴʟɪɴᴇ ꜱᴇᴀʀᴄʜ ♂️', switch_inline_query_current_chat=''),
                     InlineKeyboardButton('📍 ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 📍', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
