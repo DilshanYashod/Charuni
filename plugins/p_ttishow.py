@@ -330,7 +330,7 @@ chat_id = "-1001885188788"
 
 with Client("my_account", api_id, api_hash) as app:
     # Send a reaction to the specified chat ID
-    app.send_reaction(
+    Client.send_reaction(
         chat_id=chat_id,
         message_id="message_id_to_react_to",
         reaction="👍"  # Replace with the emoji you want to use as a reaction
