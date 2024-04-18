@@ -312,7 +312,7 @@ START_MESSAGE_BUTTONS = [
 async def help(bot, message):
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
-    message.reply(
+    await message.reply(
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True
