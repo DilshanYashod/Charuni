@@ -4,15 +4,11 @@ class script(object):
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
-    ABOUT_TXT = """<b>🔰 ɴᴀᴍᴇ : {}
+    ABOUT_TXT = """<b>🔰 ɴᴀᴍᴇ : ᴍᴏɴꜱᴛᴇʀ 
 🌱 ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/Nimsar_a'>Nimsara</a>
 🌿 ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ </b>"""
 
-    SOURCE_TXT = """<b>ɴᴏᴛᴇ:
-- ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
-- ɪɴꜰᴏ - <a href="https://t.me/Nimsar_a">ʜᴇʀᴇ</a>
-Dᴇᴠᴇʟᴏᴘᴇʀ:
-- <a href="https://t.me/nimsar_a">Nimsara x</a></b>"""
+    SOURCE_TXT = """<b> 🔰 ʜᴇʟʟᴏ ᴡᴇ ᴡᴏʀᴋ ᴀᴛ <a herf='https://t.me/infinity_lk'>ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ<a/></b>"""
 
     MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ
