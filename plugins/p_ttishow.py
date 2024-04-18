@@ -302,3 +302,17 @@ async def pin(bot, message):
 async def unpin(bot, message):
     if not message.reply_to_message: return
     await message.reply_to_message.unpin()
+
+Client.on_message(filters.command("mute"))
+async def mute_user(bot, message):
+    is_admin = await admin_check(message)
+    if not is_admin: return
+    user_id, user_first_name = extract_user(message)
+    try: await message.chat.restrict_member(user_id=user_id, permissions=ChatPermissions())                         
+    except Exception as error: await message.reply_text(str(error))
+    else:
+        if str(user_id).lower().startswith("@"):
+            await message.reply_text(f"👍🏻 {user_first_name} Lavender's mouth is shut! 🤐")
+        else:
+            await message.reply_text(f"👍🏻 <a href='tg://user?id={user_id}'>Of lavender</a> The mouth is closed! 🤐")
+
