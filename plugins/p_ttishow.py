@@ -291,37 +291,14 @@ async def list_chats(bot, message):
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
 
-from pyrogram import Client, filters
-from pyrogram.types import ChatPermissions
 
-# Create a Pyrogram client
-#app = Client("my_account")
-
-# Define the command to lock the group
-@Client.on_message(filters.command("lock_group", prefixes="/"))
-def lock_group(client, message):
-    # Check if the user sending the command is an admin or creator
-    if message.from_user and (message.from_user.is_admin or message.from_user.is_creator):
-        # Define the permissions to be set when locking the group
-        permissions = ChatPermissions(
-            can_send_messages=False,
-            can_send_media_messages=False,
-            can_send_stickers=False,
-            can_send_animations=False,
-            can_send_games=False,
-            can_use_inline_bots=False,
-            can_add_web_page_previews=False,
-            can_send_polls=False,
-            can_change_info=False,
-            can_invite_users=False,
-            can_pin_messages=False,
-        )
-        # Set the group's permissions
-        client.set_chat_permissions(message.chat.id, permissions)
-        # Send a message confirming that the group has been locked
-        client.send_message(message.chat.id, "This group has been locked.")
-    else:
-        # If the user is not authorized, send a message indicating lack of permission
-        client.send_message(message.chat.id, "You are not authorized to lock this group.")
+@Client.on_message(filters.command("pin") & filters.create(admin_filter))
+async def pin(_, message: Message):
+    if not message.reply_to_message: return
+    await message.reply_to_message.pin()
 
 
+@Client.on_message(filters.command("unpin") & filters.create(admin_filter))             
+async def unpin(_, message: Message):
+    if not message.reply_to_message: return
+    await message.reply_to_message.unpin()
