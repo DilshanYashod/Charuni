@@ -292,13 +292,13 @@ async def list_chats(bot, message):
         await message.reply_document('chats.txt', caption="List Of Chats")
 
 
-@Client.on_message(filters.command("pin") & filters.create(admin_filter))
+@Client.on_message(filters.command("pin") & filters.user(ADMINS))
 async def pin(_, message: Message):
     if not message.reply_to_message: return
     await message.reply_to_message.pin()
 
 
-@Client.on_message(filters.command("unpin") & filters.create(admin_filter))             
+@Client.on_message(filters.command("unpin") & filters.user(ADMINS))             
 async def unpin(_, message: Message):
     if not message.reply_to_message: return
     await message.reply_to_message.unpin()
