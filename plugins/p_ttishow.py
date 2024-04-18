@@ -303,16 +303,17 @@ async def unpin(bot, message):
     if not message.reply_to_message: return
     await message.reply_to_message.unpin()
 
-Client.on_message(filters.command("mute"))
-async def mute_user(bot, message):
-    is_admin = await admin_check(message)
-    if not is_admin: return
-    user_id, user_first_name = extract_user(message)
-    try: await message.chat.restrict_member(user_id=user_id, permissions=ChatPermissions())                         
-    except Exception as error: await message.reply_text(str(error))
-    else:
-        if str(user_id).lower().startswith("@"):
-            await message.reply_text(f"👍🏻 {user_first_name} Lavender's mouth is shut! 🤐")
-        else:
-            await message.reply_text(f"👍🏻 <a href='tg://user?id={user_id}'>Of lavender</a> The mouth is closed! 🤐")
+START_MESSAGE = "HELLO"
+START_MESSAGE_BUTTONS = [
+    [InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url="https://t.me/infinity_Lk")]
+]
 
+@Client.on_message(filters.command("help") & filters.user(ADMINS))             
+async def help(bot, message):
+    text = START_MESSAGE
+    reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
+    message.reply(
+        text=text,
+        reply_markup=reply_markup,
+        disable_web_page_preview=True
+    )
