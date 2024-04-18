@@ -319,6 +319,6 @@ async def help(bot, message):
     )
 
 @Client.on_message(filters.command("rik") & filters.user(ADMINS))
-asynic def rik(bot, message):
+async def rik(bot, message):
     if not message.set_username: return
     await message.set_username.rik()
