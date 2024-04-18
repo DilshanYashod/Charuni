@@ -295,10 +295,10 @@ from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions
 
 # Create a Pyrogram client
-app = Client("my_account")
+#app = Client("my_account")
 
 # Define the command handler
-@app.on_message(filters.command("lock") & filters.group)
+@Client.on_message(filters.command("lock") & filters.group)
 def lock_group(client, message):
     # Check if the user is an admin
     if not message.from_user.is_admin:
