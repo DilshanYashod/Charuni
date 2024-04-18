@@ -303,7 +303,7 @@ async def unpin(bot, message):
     if not message.reply_to_message: return
     await message.reply_to_message.unpin()
 
-START_MESSAGE = "<b>🌿 ʜᴇʟʟᴏ ɪ'ᴍ ᴍᴏɴꜱᴛᴇʀ ᴠ3</b>\n\n <b>🌳 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ꜰɪʟᴍ</b> \n\n <b>⚠️️ꜰɪʀꜱᴛ ꜱᴇᴀʀᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ɴᴏᴡ ʙᴏᴛ ɢᴇᴛ ʀᴇꜱᴜʟᴛꜱ ɴᴇxᴛ ᴄʟɪᴄᴋ ʏᴏᴜ ᴡᴀɴᴛ Qᴜᴀʟɪᴛʏ ɴᴏᴡ ᴄʟɪᴄᴋ ᴛʜɪꜱ ʙᴏᴏᴍ ʏᴏᴜʀ ꜰɪʟᴇ ʀᴇᴀᴅʏ ᴅᴏᴡɴʟᴏᴀᴅ</b>  "
+START_MESSAGE = "<b>🌿 ʜᴇʟʟᴏ ɪ'ᴍ ᴍᴏɴꜱᴛᴇʀ ᴠ3</b>\n\n<b>🌳 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ꜰɪʟᴍ</b>\n\n<b>⚠️️ꜰɪʀꜱᴛ ꜱᴇᴀʀᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ɴᴏᴡ ʙᴏᴛ ɢᴇᴛ ʀᴇꜱᴜʟᴛꜱ ɴᴇxᴛ ᴄʟɪᴄᴋ ʏᴏᴜ ᴡᴀɴᴛ Qᴜᴀʟɪᴛʏ ɴᴏᴡ ᴄʟɪᴄᴋ ᴛʜɪꜱ ʙᴏᴏᴍ ʏᴏᴜʀ ꜰɪʟᴇ ʀᴇᴀᴅʏ ᴅᴏᴡɴʟᴏᴀᴅ</b>  "
 START_MESSAGE_BUTTONS = [
     [InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url="https://t.me/infinity_Lk")]
 ]
