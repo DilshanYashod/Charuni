@@ -297,37 +297,31 @@ from pyrogram.types import ChatPermissions
 # Create a Pyrogram client
 #app = Client("my_account")
 
-# Define the command handler
-@Client.on_message(filters.command("lock") & filters.group)
+# Define the command to lock the group
+@Client.on_message(filters.command("lock_group", prefixes="/"))
 def lock_group(client, message):
-    # Check if the user is an admin
-    if not message.from_user.is_admin:
-        message.reply("You need to be an admin to lock the group.")
-        return
-
-    # Get the chat ID of the group
-    chat_id = message.chat.id
-
-    # Define the permissions you want to set
-    permissions = ChatPermissions(
-        can_send_messages=False,
-        can_send_media_messages=False,
-        can_send_stickers=False,
-        can_send_animations=False,
-        can_send_games=False,
-        can_use_inline_bots=False,
-        can_add_web_page_previews=False,
-        can_send_polls=False,
-        can_change_info=False,
-        can_invite_users=False,
-        can_pin_messages=False,
-    )
-
-    # Set the permissions for the group
-    client.set_chat_permissions(chat_id, permissions)
-
-    # Reply to the user indicating the group is locked
-    message.reply("Group locked successfully.")
-
+    # Check if the user sending the command is an admin or creator
+    if message.from_user and (message.from_user.is_admin or message.from_user.is_creator):
+        # Define the permissions to be set when locking the group
+        permissions = ChatPermissions(
+            can_send_messages=False,
+            can_send_media_messages=False,
+            can_send_stickers=False,
+            can_send_animations=False,
+            can_send_games=False,
+            can_use_inline_bots=False,
+            can_add_web_page_previews=False,
+            can_send_polls=False,
+            can_change_info=False,
+            can_invite_users=False,
+            can_pin_messages=False,
+        )
+        # Set the group's permissions
+        client.set_chat_permissions(message.chat.id, permissions)
+        # Send a message confirming that the group has been locked
+        client.send_message(message.chat.id, "This group has been locked.")
+    else:
+        # If the user is not authorized, send a message indicating lack of permission
+        client.send_message(message.chat.id, "You are not authorized to lock this group.")
 
 
