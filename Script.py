@@ -4,9 +4,9 @@ class script(object):
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
-    ABOUT_TXT = """<b>✯ Mʏ Nᴀᴍᴇ: {}
+    ABOUT_TXT = """<b>🔰 ɴᴀᴍᴇ : {}
 🌱 ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/Nimsar_a'>Nimsara</a>
-🌿 ʟɪʙʀᴀʀʏ : ᴾʸʳᵒᵍʳᵃᵐ </b>"""
+🌿 ʟɪʙʀᴀʀʏ : ᴘʏʀᴏɢʀᴀᴍ </b>"""
 
     SOURCE_TXT = """<b>ɴᴏᴛᴇ:
 - ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
