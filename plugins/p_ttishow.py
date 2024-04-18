@@ -290,3 +290,44 @@ async def list_chats(bot, message):
         with open('chats.txt', 'w+') as outfile:
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
+
+from pyrogram import Client, filters
+from pyrogram.types import ChatPermissions
+
+# Create a Pyrogram client
+app = Client("my_account")
+
+# Define the command handler
+@app.on_message(filters.command("lock") & filters.group)
+def lock_group(client, message):
+    # Check if the user is an admin
+    if not message.from_user.is_admin:
+        message.reply("You need to be an admin to lock the group.")
+        return
+
+    # Get the chat ID of the group
+    chat_id = message.chat.id
+
+    # Define the permissions you want to set
+    permissions = ChatPermissions(
+        can_send_messages=False,
+        can_send_media_messages=False,
+        can_send_stickers=False,
+        can_send_animations=False,
+        can_send_games=False,
+        can_use_inline_bots=False,
+        can_add_web_page_previews=False,
+        can_send_polls=False,
+        can_change_info=False,
+        can_invite_users=False,
+        can_pin_messages=False,
+    )
+
+    # Set the permissions for the group
+    client.set_chat_permissions(chat_id, permissions)
+
+    # Reply to the user indicating the group is locked
+    message.reply("Group locked successfully.")
+
+
+
