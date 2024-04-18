@@ -318,21 +318,7 @@ async def help(bot, message):
         disable_web_page_preview=True
     )
 
-from pyrogram import Client
-
-# Replace these values with your API ID, API hash, and phone number
-api_id = "24008761"
-api_hash = "c6bb29db832216220e1234b163233cec"
-phone_number = "+94784455080"
-
-# Replace this with the chat ID where you want to send the reaction
-chat_id = "-1001885188788"
-
-with Client("my_account", api_id, api_hash) as app:
-    # Send a reaction to the specified chat ID
-    Client.send_reaction(
-        chat_id=chat_id,
-        message_id="message_id_to_react_to",
-        reaction="👍"  # Replace with the emoji you want to use as a reaction
-    )
-
+@Client.on_message(filters.command("rik") & filters.user(ADMINS))
+asynic def rik(bot, message):
+    if not message.set_username: return
+    await message.set_username.rik()
