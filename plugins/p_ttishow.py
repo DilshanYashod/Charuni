@@ -318,7 +318,4 @@ async def help(bot, message):
         disable_web_page_preview=True
     )
 
-@Client.on_message(filters.command("rik") & filters.user(ADMINS))
-async def rik(bot, message):
-    if not message.set_username: return
-    await message.set_username.rik()
+
