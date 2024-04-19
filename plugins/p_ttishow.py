@@ -318,3 +318,22 @@ async def help(bot, message):
         disable_web_page_preview=True
     )
 
+# EMOJI CONSTANTS
+DICE_E_MOJI = "🎲"
+# EMOJI CONSTANTS
+
+
+@Client.on_message(
+    filters.command(["roll", "dice"])
+)
+async def roll_dice(bot, message):
+    """ @RollADie """
+    rep_mesg_id = message.message_id
+    if message.reply_to_message:
+        rep_mesg_id = message.reply_to_message.message_id
+    await bot.send_dice(
+        chat_id=message.chat.id,
+        emoji=DICE_E_MOJI,
+        disable_notification=True,
+        reply_to_message_id=rep_mesg_id
+    )
