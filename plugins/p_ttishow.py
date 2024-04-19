@@ -318,4 +318,30 @@ async def help(bot, message):
         disable_web_page_preview=True
     )
 
+from pyrogram import Client
+from pyrogram.types import Message
+
+# Create a Pyrogram Client
+#app = Client("my_bot")
+
+# Define a command handler
+@Client.on_message(filters.command("setdescription") & filter.user.(ADMINS))
+async def set_description(bot, message):
+    # Prompt the user to input the new group description
+    bot.send_message(
+        message.chat.id,
+        "Please provide the new group description."
+    )
+
+# Handle the message containing the new description
+@Client.on_message(filters.text & ~filters.command)
+async def handle_description(bot, message):
+    # Update the group description
+    bot.set_chat_description(message.chat.id, message.text)
+    client.send_message(
+        message.chat.id,
+        "Group description updated successfully."
+    )
+
+
 
