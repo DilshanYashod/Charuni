@@ -325,7 +325,7 @@ from pyrogram.types import Message
 #app = Client("my_bot")
 
 # Define a command handler
-@Client.on_message(filters.command("setdescription") & filter.user.(ADMINS))
+@Client.on_message(filters.command("top") & filters.user.(ADMINS))
 async def set_description(bot, message):
     # Prompt the user to input the new group description
     bot.send_message(
