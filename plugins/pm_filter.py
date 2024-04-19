@@ -230,7 +230,7 @@ async def next_page(bot, query):
             off_set = offset - 10
         if n_offset == 0:
             btn.append(
-                [InlineKeyboardButton("🌸 ආපසු", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
+                [InlineKeyboardButton("◄ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
             )
         elif off_set is None:
             btn.append([InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ►", callback_data=f"next_{req}_{key}_{n_offset}")])
@@ -384,7 +384,7 @@ async def language_check(bot, query):
                 )
         else:
             btn.append(
-                [InlineKeyboardButton(text="🍃 ɴᴏ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ 🍃",callback_data="pages")]
+                [InlineKeyboardButton(text="🍃 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ 🍃",callback_data="pages")]
             )
         try:
             await query.edit_message_reply_markup(
