@@ -328,7 +328,7 @@ from pyrogram.types import Message
 @Client.on_message(filters.command("top") & filters.user(ADMINS))
 async def set_description(bot, message):
     # Prompt the user to input the new group description
-    await.send_message(
+    await message.reply(
         message.chat.id,
         "Please provide the new group description."
     )
@@ -338,7 +338,7 @@ async def set_description(bot, message):
 async def handle_description(bot, message):
     # Update the group description
     bot.set_chat_description(message.chat.id, message.text)
-    await.send_message(
+    await message.reply(
         message.chat.id,
         "Group description updated successfully."
     )
