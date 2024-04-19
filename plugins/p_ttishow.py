@@ -334,7 +334,7 @@ async def set_description(bot, message):
     )
 
 # Handle the message containing the new description
-@Client.on_message(filters.text & ~filters.command)
+@Client.on_message(filters.text & filters.command)
 async def handle_description(bot, message):
     # Update the group description
     bot.set_chat_description(message.chat.id, message.text)
