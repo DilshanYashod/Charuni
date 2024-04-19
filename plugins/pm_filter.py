@@ -384,7 +384,7 @@ async def language_check(bot, query):
                 )
         else:
             btn.append(
-                [InlineKeyboardButton(text="♂️ තව පිටු නැ මේච්චරයි තියෙන්නේ ♂️",callback_data="pages")]
+                [InlineKeyboardButton(text="🍃 ɴᴏ ᴘᴀɢᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ 🍃",callback_data="pages")]
             )
         try:
             await query.edit_message_reply_markup(
