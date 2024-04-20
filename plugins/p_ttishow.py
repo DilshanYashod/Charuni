@@ -383,7 +383,7 @@ from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 
 
-@Client.on_message(filters.command(['song', 'mp3']) & filters.private)
+@Client.on_message(filters.command(['song', 'mp3']))
 async def song(bot, message):
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
@@ -489,15 +489,7 @@ async def vsong(bot, message: Message):
         return await pablo.edit_text(f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚊𝚒𝚕𝚎𝚍 𝙿𝚕𝚎𝚊𝚜𝚎 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗..♥️** \n**Error :** `{str(e)}`")       
     
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"""**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})\n**🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {}
-🌸 **ᴄʜᴀɴɴᴇʟ:** [{}](https://youtube.com/watch?v={})
-⭕ **ᴠɪᴇᴡꜱ:** `{}` 
-
-🧑‍🎤 **Requester:** {}
-🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
-
-  **[0.0──ㅇＦｅｅｌ───ㅇ 0.1](https://t.me/sinhalafilx)**
-  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**"""
+    capy = f"""**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})\n**🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {} \n🌸 **ᴄʜᴀɴɴᴇʟ:** [{}](https://youtube.com/watch?v={})\n ⭕ **ᴠɪᴇᴡꜱ:** `{}`\n🧑‍🎤 **Requester:** {} """
 
     await bot.send_video(
         message.chat.id,
