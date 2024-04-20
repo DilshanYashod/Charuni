@@ -347,18 +347,3 @@ async def lock_group(bot, message):
     else:
         message.reply("You must be an admin to use this command.")
 
-#Define the command to trigger the unlock
-@filters.command(#"unlock", prefixes="/")
- #def unlock_group(client, message):
-    # Check if the user is an admin
-    #if message.from_user.is_admin:
-        # Implement unlocking mechanism here
-        # For example, you can set a variable to indicate the lock status
-        locked = #False
-        # Send feedback to the user
-        message.#reply("Group unlocked successfully!")
-    #else:
-        message.#reply("You must be an admin to use this command.")
-
-# Start the bot
-#app.run()
