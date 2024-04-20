@@ -23,7 +23,7 @@ ujson
 wget
 youtube-search-python
 youtube-search
-yt-dlp==2023.2.17
+yt-dlp==2024.4.09
 
 
 
