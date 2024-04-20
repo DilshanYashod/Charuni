@@ -319,3 +319,10 @@ async def help(bot, message):
         disable_web_page_preview=True
     )
 
+
+@Client.on_message(filters.command('restart') & filters.user(ADMINS))
+async def restart_bot(bot, message):
+    msg = await message.reply("Restarting...")
+    with open('restart.txt', 'w+') as file:
+        file.write(f"{msg.chat.id}\n{msg.id}")
+    os.execl(sys.executable, sys.executable, "bot.py")
