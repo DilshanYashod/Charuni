@@ -310,7 +310,7 @@ START_MESSAGE_BUTTONS = [
     [InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url="https://t.me/infinity_Lk")]
 ]
 
- @Client.on_message(filters.command("help")         
+@Client.on_message(filters.command("domain"))          
 async def help(bot, message):
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
@@ -336,7 +336,8 @@ from telegraph import upload_file
 from utils import get_file_id
 
 
-@Client.on_message(filters.command("tele")
+
+@Client.on_message(filters.command("tele"))
 async def telegraph_upload(bot, message):
     replied = message.reply_to_message
     if not replied:
