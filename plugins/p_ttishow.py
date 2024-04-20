@@ -489,7 +489,7 @@ async def vsong(bot, message: Message):
         return await pablo.edit_text(f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚊𝚒𝚕𝚎𝚍 𝙿𝚕𝚎𝚊𝚜𝚎 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗..♥️** \n**Error :** `{str(e)}`")       
     
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"""**ᴛɪᴛʟᴇ :** [{thum}]({mo})\n**ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** {message.from_user.mention}""""
+    capy = f"""**ᴛɪᴛʟᴇ :** [{thum}]({mo})\n**ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** {message.from_user.mention}"""
 
     await bot.send_video(
         message.chat.id,
