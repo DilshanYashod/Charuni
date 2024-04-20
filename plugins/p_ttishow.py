@@ -372,7 +372,7 @@ async def telegraph_upload(bot, message):
         )
     
 
-from __future__ import unicode_literals
+
 
 import os, requests, asyncio, math, time, wget
 from pyrogram import filters, Client
