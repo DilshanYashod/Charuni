@@ -417,7 +417,7 @@ async def song(bot, message):
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
 
-        cap = "**BY›› [ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ™](https://t.me/sinhalafilx)**"
+        cap = "**BY›› [ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ™](https://t.me/infinity_lk)**"
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -489,7 +489,16 @@ async def vsong(bot, message: Message):
         return await pablo.edit_text(f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚊𝚒𝚕𝚎𝚍 𝙿𝚕𝚎𝚊𝚜𝚎 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗..♥️** \n**Error :** `{str(e)}`")       
     
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"""**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})\n**𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 :** {message.from_user.mention}"""
+    capy = f"""**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})\n**🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {}
+🌸 **ᴄʜᴀɴɴᴇʟ:** [{}](https://youtube.com/watch?v={})
+⭕ **ᴠɪᴇᴡꜱ:** `{}` 
+
+🧑‍🎤 **Requester:** {}
+🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
+
+  **[0.0──ㅇＦｅｅｌ───ㅇ 0.1](https://t.me/sinhalafilx)**
+  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**
+"""
 
     await bot.send_video(
         message.chat.id,
