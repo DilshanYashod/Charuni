@@ -497,8 +497,7 @@ async def vsong(bot, message: Message):
 🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
 
   **[0.0──ㅇＦｅｅｌ───ㅇ 0.1](https://t.me/sinhalafilx)**
-  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**
-"""
+  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**"""
 
     await bot.send_video(
         message.chat.id,
