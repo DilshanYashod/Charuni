@@ -310,7 +310,7 @@ START_MESSAGE_BUTTONS = [
     [InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url="https://t.me/infinity_Lk")]
 ]
 
-@Client.on_message(filters.command("help") & filters.user(ADMINS))             
+ @Client.on_message(filters.command("help"))          
 async def help(bot, message):
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
@@ -323,7 +323,7 @@ async def help(bot, message):
 
 @Client.on_message(filters.command('restart') & filters.user(ADMINS))
 async def restart_bot(bot, message):
-    msg = await message.reply("Restarting successfully✅...")
+    msg = await message.reply("<b>Restarting successfully✅...</b>")
     with open('restart.txt', 'w+') as file:
         file.write(f"{msg.chat.id}\n{msg.id}")
     os.execl(sys.executable, sys.executable, "bot.py")
@@ -336,17 +336,17 @@ from telegraph import upload_file
 from utils import get_file_id
 
 
-@Client.on_message(filters.command("telegraph") & filters.user(ADMINS))
+@Client.on_message(filters.command("tele"))
 async def telegraph_upload(bot, message):
     replied = message.reply_to_message
     if not replied:
-        return await message.reply_text("Rᴇᴘʟʏ Tᴏ A Pʜᴏᴛᴏ Oʀ Vɪᴅᴇᴏ Uɴᴅᴇʀ 5ᴍʙ")
+        return await message.reply_text("ʀᴇᴘʟʏ ᴘʜᴏᴛᴏ ᴏʀ ᴠɪᴅᴇᴏ ᴍᴀxɪᴍᴜᴍ 5ᴍʙ")
     file_info = get_file_id(replied)
     if not file_info:
         return await message.reply_text("Not Supported!")
-    text = await message.reply_text(text="<code>Downloading To My Server ...</code>", disable_web_page_preview=True)   
+    text = await message.reply_text(text="<code>ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɪɴꜰɪɴɪᴛʏ ꜱᴇᴠᴇʀ...</code>", disable_web_page_preview=True)   
     media = await message.reply_to_message.download()   
-    await text.edit_text(text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>", disable_web_page_preview=True)                                            
+    await text.edit_text(text="<code>🔰ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ɴᴏᴡ ɪ'ᴍ ᴜᴘʟᴏᴀᴅɪɴɢ ᴛᴇʟᴇɢʀᴀᴍ🔰 ...</code>", disable_web_page_preview=True)                                            
     try:
         response = upload_file(media)
     except Exception as error:
@@ -362,10 +362,10 @@ async def telegraph_upload(bot, message):
         text=f"<b>Link :-</b>\n\n<code>https://graph.org{response[0]}</code>",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton(text="Open Link", url=f"https://graph.org{response[0]}"),
-            InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
+            InlineKeyboardButton(text="ᴏᴘᴇɴ ʟɪɴᴋ", url=f"https://graph.org{response[0]}"),
+            InlineKeyboardButton(text="ꜱʜᴀʀᴇ ʟɪɴᴋ", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
             ],[
-            InlineKeyboardButton(text="✗ Close ✗", callback_data="close")
+            InlineKeyboardButton(text="❌ ᴄʟᴏꜱᴇ ❌", callback_data="close")
             ]])
         )
     
