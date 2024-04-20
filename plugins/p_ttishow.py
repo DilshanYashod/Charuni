@@ -62,7 +62,8 @@ async def save_group(bot, message):
                                                  reply_markup=InlineKeyboardMarkup(
                                                                          [[
                                                                            InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
-                                                                           InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
+                                                                        ],[
+                                                                           InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK),
                                                                         ],[
                                                                            InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Nimsar_a")
                                                                          ]]
