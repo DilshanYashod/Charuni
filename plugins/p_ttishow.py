@@ -305,7 +305,7 @@ async def unpin(bot, message):
     if not message.reply_to_message: return
     await message.reply_to_message.unpin()
 
-START_MESSAGE = "<b>🌿 ʜᴇʟʟᴏ ɪ'ᴍ ᴍᴏɴꜱᴛᴇʀ ᴠ3</b>\n\n<b>🌳 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ꜰɪʟᴍ</b>\n\n<b>⚠️️ꜰɪʀꜱᴛ ꜱᴇᴀʀᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ɴᴏᴡ ʙᴏᴛ ɢᴇᴛ ʀᴇꜱᴜʟᴛꜱ ɴᴇxᴛ ᴄʟɪᴄᴋ ʏᴏᴜ ᴡᴀɴᴛ Qᴜᴀʟɪᴛʏ ɴᴏᴡ ᴄʟɪᴄᴋ ᴛʜɪꜱ ʙᴏᴏᴍ ʏᴏᴜʀ ꜰɪʟᴇ ʀᴇᴀᴅʏ ᴅᴏᴡɴʟᴏᴀᴅ</b>  "
+START_MESSAGE = "<b>🌿 ʜᴇʟʟᴏ ɪ'ᴍ ᴍᴏɴꜱᴛᴇʀ ᴠ3</b>\n\n<b>🌳 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ꜰɪʟᴍ</b>\n\n<b>⚠️️ꜰɪʀꜱᴛ ꜱᴇᴀʀᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ɴᴏᴡ ʙᴏᴛ ɢᴇᴛ ʀᴇꜱᴜʟᴛꜱ ɴᴇxᴛ ᴄʟɪᴄᴋ ʏᴏᴜ ᴡᴀɴᴛ Qᴜᴀʟɪᴛʏ ɴᴏᴡ ᴄʟɪᴄᴋ ᴛʜɪꜱ ʙᴏᴏᴍ ʏᴏᴜʀ ꜰɪʟᴇ ʀᴇᴀᴅʏ ᴅᴏᴡɴʟᴏᴀᴅ</b>/n/n ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ/n/n /song - download song/n/n /video - download video "
 START_MESSAGE_BUTTONS = [
     [InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url="https://t.me/infinity_Lk")]
 ]
@@ -392,7 +392,7 @@ async def song(bot, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = await message.reply(f"**ѕєαrchíng чσur ѕσng...!\n {query}**")
+    m = await message.reply(f"**🌿 ꜱᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ ꜱᴏɴɢ 🌿...\n {query}**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -410,7 +410,7 @@ async def song(bot, message):
         print(str(e))
         return await m.edit("**𝙵𝙾𝚄𝙽𝙳 𝙽𝙾𝚃𝙷𝙸𝙽𝙶 𝙿𝙻𝙴𝙰𝚂𝙴 𝙲𝙾𝚁𝚁𝙴𝙲𝚃 𝚃𝙷𝙴 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶 𝙾𝚁 𝙲𝙷𝙴𝙲𝙺 𝚃𝙷𝙴 𝙻𝙸𝙽𝙺**")
                 
-    await m.edit("**dσwnlσαdíng чσur ѕσng...!**")
+    await m.edit("**ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ꜱᴏɴɢ**")
     try:
         with YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -489,7 +489,7 @@ async def vsong(bot, message: Message):
         return await pablo.edit_text(f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚊𝚒𝚕𝚎𝚍 𝙿𝚕𝚎𝚊𝚜𝚎 𝚃𝚛𝚢 𝙰𝚐𝚊𝚒𝚗..♥️** \n**Error :** `{str(e)}`")       
     
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"""**𝚃𝙸𝚃𝙻𝙴 :** [{thum}]({mo})\n**🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {} \n🌸 **ᴄʜᴀɴɴᴇʟ:** [{}](https://youtube.com/watch?v={})\n ⭕ **ᴠɪᴇᴡꜱ:** `{}`\n🧑‍🎤 **Requester:** {} """
+    capy = f"""**ᴛɪᴛʟᴇ :** [{thum}]({mo})\n**ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** {message.from_user.mention}""""""
 
     await bot.send_video(
         message.chat.id,
