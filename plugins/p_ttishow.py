@@ -327,3 +327,38 @@ async def restart_bot(bot, message):
     with open('restart.txt', 'w+') as file:
         file.write(f"{msg.chat.id}\n{msg.id}")
     os.execl(sys.executable, sys.executable, "bot.py")
+
+
+from pyrogram import Client, filters
+
+# Create a Pyrogram Client
+#app = Client("my_bot")
+
+# Define the command to trigger the lock
+@filters.command("lock", prefixes="/")
+async def lock_group(bot, message):
+    # Check if the user is an admin
+    if message.from_user.is_admin:
+        # Implement locking mechanism here
+        # For example, you can set a variable to indicate the lock status
+        locked = True
+        # Send feedback to the user
+        message.reply("Group locked successfully!")
+    else:
+        message.reply("You must be an admin to use this command.")
+
+#Define the command to trigger the unlock
+@filters.command(#"unlock", prefixes="/")
+ #def unlock_group(client, message):
+    # Check if the user is an admin
+    #if message.from_user.is_admin:
+        # Implement unlocking mechanism here
+        # For example, you can set a variable to indicate the lock status
+        locked = #False
+        # Send feedback to the user
+        message.#reply("Group unlocked successfully!")
+    #else:
+        message.#reply("You must be an admin to use this command.")
+
+# Start the bot
+#app.run()
