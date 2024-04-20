@@ -417,7 +417,7 @@ async def song(bot, message):
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
 
-        cap = "**BY›› [ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ™](https://t.me/infinity_lk)**"
+        cap = "** Channel 🔰 [ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ™](https://t.me/infinity_lk)/n/n Upload {} **"
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -505,4 +505,42 @@ async def vsong(bot, message: Message):
     for files in (sedlyf, file_stark):
         if files and os.path.exists(files):
             os.remove(files)
+
+import requests
+from requests import get 
+from pyrogram import filters
+from pyrogram.types import InputMediaPhoto
+
+@Client.on_message(filters.command(["image"], prefixes=["/", "!", "%", ",", "", ".", "@", "#"]))
+async def pinterest(bot, message):
+     chat_id = message.chat.id
+
+     try:
+       query= message.text.split(None,1)[1]
+     except:
+         return await message.reply("**ɢɪᴠᴇ ɪᴍᴀɢᴇ ɴᴀᴍᴇ ғᴏʀ sᴇᴀʀᴄʜ 🔍**")
+
+     images = get(f"https://pinterest-api-one.vercel.app/?q={query}").json()
+
+     media_group = []
+     count = 0
+
+     msg = await message.reply(f"sᴄʀᴀᴘɪɴɢ ɪᴍᴀɢᴇs ғʀᴏᴍ ᴘɪɴᴛᴇʀᴇᴛs...")
+     for url in images["images"][:6]:
+                  
+          media_group.append(InputMediaPhoto(media=url))
+          count += 1
+          await msg.edit(f"=> ᴏᴡᴏ sᴄʀᴀᴘᴇᴅ ɪᴍᴀɢᴇs {count}")
+
+     try:
+        
+        await client.send_media_group(
+                chat_id=chat_id, 
+                media=media_group,
+                reply_to_message_id=message.id)
+        return await msg.delete()
+
+     except Exception as e:
+           await msg.delete()
+           return await message.reply(f"ᴇʀʀᴏʀ : {e}")
 
