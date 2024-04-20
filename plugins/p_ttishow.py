@@ -305,12 +305,12 @@ async def unpin(bot, message):
     if not message.reply_to_message: return
     await message.reply_to_message.unpin()
 
-START_MESSAGE = "<b>🌿 ʜᴇʟʟᴏ ɪ'ᴍ ᴍᴏɴꜱᴛᴇʀ ᴠ3</b>\n\n<b>🌳 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ꜰɪʟᴍ</b>\n\n<b>⚠️️ꜰɪʀꜱᴛ ꜱᴇᴀʀᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ɴᴏᴡ ʙᴏᴛ ɢᴇᴛ ʀᴇꜱᴜʟᴛꜱ ɴᴇxᴛ ᴄʟɪᴄᴋ ʏᴏᴜ ᴡᴀɴᴛ Qᴜᴀʟɪᴛʏ ɴᴏᴡ ᴄʟɪᴄᴋ ᴛʜɪꜱ ʙᴏᴏᴍ ʏᴏᴜʀ ꜰɪʟᴇ ʀᴇᴀᴅʏ ᴅᴏᴡɴʟᴏᴀᴅ</b>/n/n ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ/n/n /song - download song/n/n /video - download video "
+START_MESSAGE = "<b>🌿 ʜᴇʟʟᴏ ɪ'ᴍ ᴍᴏɴꜱᴛᴇʀ ᴠ3</b>\n\n<b>🌳 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ꜰɪʟᴍ</b>\n\n<b>⚠️️ꜰɪʀꜱᴛ ꜱᴇᴀʀᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴍᴏᴠɪᴇ ᴏʀ ꜱᴇʀɪᴇꜱ ɴᴏᴡ ʙᴏᴛ ɢᴇᴛ ʀᴇꜱᴜʟᴛꜱ ɴᴇxᴛ ᴄʟɪᴄᴋ ʏᴏᴜ ᴡᴀɴᴛ Qᴜᴀʟɪᴛʏ ɴᴏᴡ ᴄʟɪᴄᴋ ᴛʜɪꜱ ʙᴏᴏᴍ ʏᴏᴜʀ ꜰɪʟᴇ ʀᴇᴀᴅʏ ᴅᴏᴡɴʟᴏᴀᴅ</b>/n/n ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ\n\n <b>/song - download song</b>\n\n<b> /video - download video</b> "
 START_MESSAGE_BUTTONS = [
     [InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url="https://t.me/infinity_Lk")]
 ]
 
-@Client.on_message(filters.command("domain"))          
+@Client.on_message(filters.command("help"))          
 async def help(bot, message):
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
