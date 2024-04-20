@@ -323,7 +323,7 @@ async def help(bot, message):
 
 @Client.on_message(filters.command('restart') & filters.user(ADMINS))
 async def restart_bot(bot, message):
-    msg = await message.reply("Restarting...")
+    msg = await message.reply("Restarting successfully✅...")
     with open('restart.txt', 'w+') as file:
         file.write(f"{msg.chat.id}\n{msg.id}")
     os.execl(sys.executable, sys.executable, "bot.py")
@@ -340,7 +340,7 @@ from utils import get_file_id
 async def telegraph_upload(bot, message):
     replied = message.reply_to_message
     if not replied:
-        return await update.reply_text("Rᴇᴘʟʏ Tᴏ A Pʜᴏᴛᴏ Oʀ Vɪᴅᴇᴏ Uɴᴅᴇʀ 5ᴍʙ")
+        return await message.reply_text("Rᴇᴘʟʏ Tᴏ A Pʜᴏᴛᴏ Oʀ Vɪᴅᴇᴏ Uɴᴅᴇʀ 5ᴍʙ")
     file_info = get_file_id(replied)
     if not file_info:
         return await message.reply_text("Not Supported!")
