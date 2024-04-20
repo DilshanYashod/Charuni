@@ -146,17 +146,13 @@ Nᴀᴍᴇ - {}"""
 🌿 /tele : ɢᴇᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ
 🌿 /help : ꜱᴏᴍᴇ ʜᴇʟᴘ ᴍᴇ 
 
-    REQINFO = """
-fropnn
+    REQINFO = """ꜰɪʟᴇs ᴡᴇʀᴇ..."""
 
-    MINFO = """
-ksls
+    MINFO = """ꜰɪʟᴇs ᴡᴇʀᴇ..."""
 
-    SINFO = """
-jklslsss
+    SINFO = """ꜰɪʟᴇs ᴡᴇʀᴇ..."""
 
-    NORSLTS = """
-jsklslsl
+    NORSLTS = """ꜰɪʟᴇs ᴡᴇʀᴇ..."""
 
     CAPTION = """
 <b>📂 Fɪʟᴇ ɴᴀᴍᴇ : </b> <code>{file_name}</code>
