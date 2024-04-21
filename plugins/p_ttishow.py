@@ -337,22 +337,22 @@ async def get_group_status(bot, message):
     group_username = message.command[1]
     
     try:
-        group = await client.get_chat(group_username)
+        group = await bot.get_chat(group_username)
     except Exception as e:
         await message.reply(f"Error: {e}")
         return
     
-    total_members = await client.get_chat_members_count(group.id)
+    total_members = await bot.get_chat_members_count(group.id)
     group_description = group.description
     premium_acc = banned = deleted_acc = bot = 0  # You should replace these variables with actual counts.
 
     response_text = (
         f"➖➖➖➖➖➖➖\n"
-        f"➲ GROUP NAME : {group.title} ✅\n"
-        f"➲ GROUP ID : {group.id}\n"
-        f"➲ TOTAL MEMBERS : {total_members}\n"
-        f"➲ DESCRIPTION : {group_description or 'N/A'}\n"
-        f"➲ USERNAME : @{group_username}\n"
+        f"🌿 ɢʀᴏᴜᴘ ɴᴀᴍᴇ : {group.title} ✅\n"
+        f"🌿 ɢʀᴏᴜᴘ ɪᴅ : {group.id}\n"
+        f"🌿 ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀꜱ  : {total_members}\n"
+        f"🌿 ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ  : {group_description or 'N/A'}\n"
+        f"🌿 ᴜꜱᴇʀɴᴀᴍᴇ : @{group_username}\n"
        
         f"➖➖➖➖➖➖➖"
     )
