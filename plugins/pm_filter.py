@@ -1531,6 +1531,8 @@ async def auto_filter(client, msg, spoll=False):
             m=await message.reply_sticker("CAACAgIAAx0CdbtO-QACB01lvVWE-R4p5LE5Vd-sMgn4us8xZgACggEAAiI3jgTNZuSYsjrT8x4E",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/infinityworldlk")]]) 
             )
+            await asyncio.sleep(0.4)
+            await m.delete()
             files, offset, total_results = await get_search_results(message.chat.id ,search.lower(), offset=0, filter=True)
             if not files:
                 if settings["spell_check"]:
@@ -1547,6 +1549,8 @@ async def auto_filter(client, msg, spoll=False):
         m=await message.reply_sticker("CAACAgIAAx0CdbtO-QACB01lvVWE-R4p5LE5Vd-sMgn4us8xZgACggEAAiI3jgTNZuSYsjrT8x4E",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/infinityworldlk")]]) 
         )
+        await asyncio.sleep(0.4)
+        await m.delete()
         settings = await get_settings(message.chat.id)
     temp.SEND_ALL_TEMP[message.from_user.id] = files
     temp.KEYWORD[message.from_user.id] = search
