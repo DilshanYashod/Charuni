@@ -165,7 +165,7 @@ async def next_page(bot, query):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
-                    InlinekeyboardButton('🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
+                    InlinekeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
                     InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )            
@@ -1701,7 +1701,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🔰 ʜɪ {message.from_user.mention}, ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ \n\n<b> 🌿 Name {search}</b>\n\n<b> 🌳 ᴀᴠᴀɪʟᴀʙʟᴇ ʀᴇꜱᴜʟᴛꜱ {total_results} </b>\n\n<b>🍃 ᴄʜᴀᴛ ɴᴀᴍᴇ {message.chat.title} </b>"
+        cap = f"<b>🔰 ʜɪ {message.from_user.mention}, ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ</b> \n\n<b>🌿 ɴᴀᴍᴇ ➔ {search}</b>\n\n<b>🌳 ᴀᴠᴀɪʟᴀʙʟᴇ ʀᴇꜱᴜʟᴛꜱ ➔ {total_results} </b>\n\n<b>🍃 ᴄʜᴀᴛ ɴᴀᴍᴇ {message.chat.title} </b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
