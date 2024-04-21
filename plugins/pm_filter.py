@@ -1621,7 +1621,7 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
-                    InlinekeyboardButton('🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
+                    InlineKeyboardButton(f'🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
                     InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )       
