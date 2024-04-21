@@ -191,7 +191,7 @@ async def next_page(bot, query):
                     [InlineKeyboardButton("◄ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
                 )
             elif off_set is None:
-                btn.append([InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ►", callback_data=f"next_{req}_{key}_{n_offset}")])
+                btn.append([InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ►", callback_data=f"next_{req}_{key}_{n_offset}")])
             else:
                 btn.append(
                     [
@@ -212,7 +212,7 @@ async def next_page(bot, query):
                     [InlineKeyboardButton("◄ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages")]
                 )
             elif off_set is None:
-                btn.append([InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"), InlineKeyboardButton("◄ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{n_offset}")])
+                btn.append([InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/int(MAX_B_TN))+1} / {math.ceil(total/int(MAX_B_TN))}", callback_data="pages"), InlineKeyboardButton("◄ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{n_offset}")])
             else:
                 btn.append(
                     [
@@ -234,7 +234,7 @@ async def next_page(bot, query):
                 [InlineKeyboardButton("◄ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages")]
             )
         elif off_set is None:
-            btn.append([InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ►", callback_data=f"next_{req}_{key}_{n_offset}")])
+            btn.append([InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ ►", callback_data=f"next_{req}_{key}_{n_offset}")])
         else:
             btn.append(
                 [
@@ -372,17 +372,17 @@ async def language_check(bot, query):
             try:
                 if settings['max_btn']:
                     btn.append(
-                        [InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
+                        [InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
                     )
 
                 else:
                     btn.append(
-                        [InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
+                        [InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
                     )
             except KeyError:
                 await save_group_settings(query.message.chat.id, 'max_btn', True)
                 btn.append(
-                    [InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
                 )
         else:
             btn.append(
@@ -1530,7 +1530,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_sticker("CAACAgEAAx0CbhArBwACG9BmJNAhLkaYSKZjUeEpajX7dxA9LQACqwIAAv3uIERK9zX7E1wEHh4E",
+            m=await message.reply_sticker("CAACAgIAAx0CcF2ytAAC6stmJPXCT2ih831MGU8uKZMAAbgUq9kAAl4SAALsmSlJfO_ZpUf3ZDseBA",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'🌿 ꜱᴇᴀʀᴄʜɪɴɢ ꜰᴏʀ {search} 🌿', url=f"https://t.me/infinity_lk")]]) 
             )
             await asyncio.sleep(0.8)
@@ -1548,7 +1548,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker("CAACAgEAAx0CbhArBwACG9BmJNAhLkaYSKZjUeEpajX7dxA9LQACqwIAAv3uIERK9zX7E1wEHh4E",
+        m=await message.reply_sticker("CAACAgIAAx0CcF2ytAAC6stmJPXCT2ih831MGU8uKZMAAbgUq9kAAl4SAALsmSlJfO_ZpUf3ZDseBA",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'🌿 ꜱᴇᴀʀᴄʜɪɴɢ ꜰᴏʀ {search} 🌿', url=f"https://t.me/infinity_lk")]]) 
         )
         await asyncio.sleep(0.8)
@@ -1651,16 +1651,16 @@ async def auto_filter(client, msg, spoll=False):
         try:
             if settings['max_btn']:
                 btn.append(
-                    [InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
                 )
             else:
                 btn.append(
-                    [InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
                 )
         except KeyError:
             await save_group_settings(message.chat.id, 'max_btn', True)
             btn.append(
-                [InlineKeyboardButton("⭕ පිටු", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
+                [InlineKeyboardButton("🌳 ᴘᴀɢᴇꜱ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ►",callback_data=f"next_{req}_{key}_{offset}")]
             )
     else:
         btn.append(
@@ -1701,7 +1701,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🔰 ʜɪ {message.from_user.mention}, ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ \n\n<b> 🌿 Name {search}</b>\n\n<b> 🌳 ᴀᴠᴀɪʟᴀʙʟᴇ ʀᴇꜱᴜʟᴛꜱ {total_results} </b>\n\n<b>🍃 ʀᴇQᴜᴇꜱᴛᴇᴅ ᴛɪᴍᴇ {remaining_seconds}</b>"
+        cap = f"<b>🔰 ʜɪ {message.from_user.mention}, ʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ \n\n<b> 🌿 Name {search}</b>\n\n<b> 🌳 ᴀᴠᴀɪʟᴀʙʟᴇ ʀᴇꜱᴜʟᴛꜱ {total_results} </b>\n\n<b>🍃 ᴄʜᴀᴛ ɴᴀᴍᴇ {message.chat.title} </b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
