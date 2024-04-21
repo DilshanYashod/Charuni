@@ -604,4 +604,4 @@ async def aexec(code, Client, message):
         "async def __aexec(Client, message): "
         + "".join(f"\n {a}" for a in code.split("\n"))
     )
-    return await locals()["__aexec"](client, message)
+    return await locals()["__aexec"](Client, message)
