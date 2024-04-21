@@ -328,6 +328,18 @@ async def restart_bot(bot, message):
         file.write(f"{msg.chat.id}\n{msg.id}")
     os.execl(sys.executable, sys.executable, "bot.py")
 
+slow_mode_duration = 60
+
+@Client.on_message(filters.command('slow') & filters.user(ADMINS))
+async def set_slow_mode(bot, message):
+msg = await message.reply("<b>Restarting successfully✅...</b>")   
+    chat_id,
+    user_id=None,  # To apply to all users
+    permissions={"can_send_messages": True},
+    until_date=None,
+    set_slow_mode=slow_mode_duration
+
+
 
 import os, asyncio
 from pyrogram import Client, filters
