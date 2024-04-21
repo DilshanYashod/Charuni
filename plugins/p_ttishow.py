@@ -573,7 +573,7 @@ async def executor(bot, message):
     redirected_error = sys.stderr = StringIO()
     stdout, stderr, exc = None, None, None
     try:
-        await aexec(code, client, message)
+        await aexec(code, Client, message)
     except:
         exc = traceback.format_exc()
     stdout = redirected_output.getvalue()
