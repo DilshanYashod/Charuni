@@ -164,7 +164,8 @@ async def next_page(bot, query):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🔰 ᴍᴏᴠɪᴇ 🔰', 'minfo'),
+                    InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
+                    InlinekeyboardButton('🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
                     InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )            
@@ -339,7 +340,8 @@ async def language_check(bot, query):
             else:
                 btn.insert(0, 
                     [
-                        InlineKeyboardButton(f'🔰 ᴍᴏᴠɪᴇ 🔰', 'minfo'),
+                        InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
+                        InlinekeyboardButton('🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
                         InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                     ]
                 )
@@ -804,7 +806,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                   InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
                   InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
                ],[
-                  InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/nimsar_a")
+                  InlineKeyboardButton('🌿 ᴍᴀꜱᴛᴇʀ 🌿', url="t.me/nimsar_a")
                  ]
                 ]
             )
@@ -1618,7 +1620,8 @@ async def auto_filter(client, msg, spoll=False):
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'🔰 ᴍᴏᴠɪᴇ 🔰', 'minfo'),
+                    InlineKeyboardButton(f'🔰 ɪɴꜰᴏ 🔰', 'reqinfo'),
+                    InlinekeyboardButton('🌿 ᴍᴏᴠɪᴇ 🌿', 'minfo'),
                     InlineKeyboardButton(f'💌 ᴅᴀᴛᴀ 💌', 'sinfo')
                 ]
             )       
