@@ -33,8 +33,12 @@ async def start(client, message):
                     InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await m.edit_text("<b><i>ꜱᴛᴀʀᴛɪɴɢ ɪɴꜰɪɴɪᴛʏ ʙᴏᴛ...</i></b>")
+        await asyncio.sleep(0.4)
+        await m.delete()        
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ")
-        await asyncio.sleep(2)
+        await asyncio.sleep(0.5)
+        await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -63,8 +67,12 @@ async def start(client, message):
                     InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await m.edit_text("<b><i>ꜱᴛᴀʀᴛɪɴɢ ɪɴꜰɪɴɪᴛʏ ʙᴏᴛ...</i></b>")
+        await asyncio.sleep(0.4)
+        await m.delete()        
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ")
-        await asyncio.sleep(2)
+        await asyncio.sleep(0.5)
+        await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
