@@ -599,9 +599,9 @@ async def executor(bot, message):
         os.remove('eval.txt')
 
 
-async def aexec(code, client, message):
+async def aexec(code, Client, message):
     exec(
-        "async def __aexec(client, message): "
+        "async def __aexec(Client, message): "
         + "".join(f"\n {a}" for a in code.split("\n"))
     )
     return await locals()["__aexec"](client, message)
