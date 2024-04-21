@@ -1528,7 +1528,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_sticker("CAACAgIAAx0CdbtO-QACB01lvVWE-R4p5LE5Vd-sMgn4us8xZgACggEAAiI3jgTNZuSYsjrT8x4E",
+            m=await message.reply_sticker("CAACAgEAAx0CbhArBwACG9BmJNAhLkaYSKZjUeEpajX7dxA9LQACqwIAAv3uIERK9zX7E1wEHh4E",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'🌿 ꜱᴇᴀʀᴄʜɪɴɢ ꜰᴏʀ {search} 🌿', url=f"https://t.me/infinity_lk")]]) 
             )
             await asyncio.sleep(0.8)
@@ -1546,7 +1546,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker("CAACAgIAAx0CdbtO-QACB01lvVWE-R4p5LE5Vd-sMgn4us8xZgACggEAAiI3jgTNZuSYsjrT8x4E",
+        m=await message.reply_sticker("CAACAgEAAx0CbhArBwACG9BmJNAhLkaYSKZjUeEpajX7dxA9LQACqwIAAv3uIERK9zX7E1wEHh4E",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'🌿 ꜱᴇᴀʀᴄʜɪɴɢ ꜰᴏʀ {search} 🌿', url=f"https://t.me/infinity_lk")]]) 
         )
         await asyncio.sleep(0.8)
