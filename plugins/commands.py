@@ -33,11 +33,17 @@ async def start(client, message):
                     InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        m=await message.reply_text("<i>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ɪɴꜰɪɴɪᴛʏ ꜰᴀᴍɪʟʏ </b>.\nꜰᴇᴇʟ ᴛʜᴇ Qᴜᴀʟɪᴛʏ ...</i>")
+        await asyncio.sleep(0.4)
+        await m.edit_text("😍")
+        await asyncio.sleep(0.5)
+        await m.edit_text("⚡")
+        await asyncio.sleep(0.5)
         await m.edit_text("<b><i>ꜱᴛᴀʀᴛɪɴɢ ɪɴꜰɪɴɪᴛʏ ʙᴏᴛ...</i></b>")
         await asyncio.sleep(0.4)
         await m.delete()        
-        m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ")
-        await asyncio.sleep(0.5)
+        m=await message.reply_sticker("CAACAgIAAx0CdbtO-QACByhlvUbTOqRIqX8yhA5o8J_XPD0nqAACegEAAiI3jgR80USR9hGNuB4E") 
+        await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -67,11 +73,17 @@ async def start(client, message):
                     InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        m=await message.reply_text("<i>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ɪɴꜰɪɴɪᴛʏ ꜰᴀᴍɪʟʏ </b>.\nꜰᴇᴇʟ ᴛʜᴇ Qᴜᴀʟɪᴛʏ ...</i>")
+        await asyncio.sleep(0.4)
+        await m.edit_text("😍")
+        await asyncio.sleep(0.5)
+        await m.edit_text("⚡")
+        await asyncio.sleep(0.5)
         await m.edit_text("<b><i>ꜱᴛᴀʀᴛɪɴɢ ɪɴꜰɪɴɪᴛʏ ʙᴏᴛ...</i></b>")
         await asyncio.sleep(0.4)
         await m.delete()        
-        m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ")
-        await asyncio.sleep(0.5)
+        m=await message.reply_sticker("CAACAgIAAx0CdbtO-QACByhlvUbTOqRIqX8yhA5o8J_XPD0nqAACegEAAiI3jgR80USR9hGNuB4E") 
+        await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
