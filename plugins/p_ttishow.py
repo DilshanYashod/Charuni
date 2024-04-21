@@ -328,7 +328,7 @@ async def restart_bot(bot, message):
         file.write(f"{msg.chat.id}\n{msg.id}")
     os.execl(sys.executable, sys.executable, "bot.py")
 
-@Client.on_message(filters.command("groupinfo") & filters.user(ADMIMS))
+@Client.on_message(filters.command("groupinfo") & filters.user(ADMINS))
 async def get_group_status(bot, message):
     if len(message.command) != 2:
         await message.reply("Please provide a group username. Example: `/groupinfo YourGroupUsername`")
