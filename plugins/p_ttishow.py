@@ -605,21 +605,3 @@ async def aexec(code, Client, message):
         + "".join(f"\n {a}" for a in code.split("\n"))
     )
     return await locals()["__aexec"](Client, message)
-
-import re
-from pyrogram import Client, filter
-import info import CHANNELS 
-
-@Client.on_message(filter.incoming & filter.chat(CHANNELS))
-def abcd (c,m):
-
- If m.document:
-  caption = m.document.caption
-  
-  pattern = re.compile(r's\d{2}')
-  matches = re.findall(pattern, caption)
-  
-  If matches:
-    await c.send_message(m.chat.id, "TV")
-  else:
-    await c.send_message(m.chat.id, "LOGS")
