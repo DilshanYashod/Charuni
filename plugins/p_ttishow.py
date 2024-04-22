@@ -323,9 +323,6 @@ async def help(bot, message):
 
 @Client.on_message(filters.command('restart') & filters.user(ADMINS))
 async def restart_bot(bot, message):
-    msg = await message.reply_sticker("CAACAgIAAx0CdbtO-QACByhlvUbTOqRIqX8yhA5o8J_XPD0nqAACegEAAiI3jgR80USR9hGNuB4E") 
-    msg = await asyncio.sleep(1)
-    await msg.delete()
     msg = await message.reply("<b>Restarting successfully✅...</b>")
     with open('restart.txt', 'w+') as file:
         file.write(f"{msg.chat.id}\n{msg.id}")
