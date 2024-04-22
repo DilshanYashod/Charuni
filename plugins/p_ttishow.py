@@ -310,8 +310,9 @@ START_MESSAGE_BUTTONS = [
     [InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url="https://t.me/infinity_Lk")]
 ]
 
-@Client.on_message(filters.command("help"))          
+@Client.on_message(filters.command("help"))
 async def help(bot, message):
+    await message.react(emoji="🔥")
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
     await message.reply(
@@ -323,6 +324,7 @@ async def help(bot, message):
 
 @Client.on_message(filters.command('restart') & filters.user(ADMINS))
 async def restart_bot(bot, message):
+    await message.react(emoji="😍")
     msg = await message.reply("<b>Restarting successfully✅...</b>")
     with open('restart.txt', 'w+') as file:
         file.write(f"{msg.chat.id}\n{msg.id}")
