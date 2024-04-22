@@ -606,9 +606,9 @@ async def aexec(code, Client, message):
     )
     return await locals()["__aexec"](Client, message)
 
-Import re
+import re
 from pyrogram import Client, filter
-Import CHANNELS from somewhere
+import info import CHANNELS 
 
 @Client.on_message(filter.incoming & filter.chat(CHANNELS))
 def abcd (c,m):
