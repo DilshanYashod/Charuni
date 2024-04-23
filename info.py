@@ -111,3 +111,11 @@ URL = environ.get("URL", "https://mytestvj-998c9929dc7a.herokuapp.com/")
 
 # Rename Info ; If True Then Bot Rename File Else Not
 RENAME_MODE = bool(environ.get('RENAME_MODE', True)) # Set True or Flase
+
+PROGRESS_BAR = """\n
+╭━━━━❰ Tech VJ Renaming... ❱━➣
+┣⪼ 🗂️ : {1} | {2}
+┣⪼ ⏳️ : {0}%
+┣⪼ 🚀 : {3}/s
+┣⪼ ⏱️ : {4}
+╰━━━━━━━━━━━━━━━➣ """
