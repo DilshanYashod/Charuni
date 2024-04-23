@@ -164,4 +164,19 @@ class Database:
     async def get_db_size(self):
         return (await self.db.command("dbstats"))['dataSize']
 
+async def set_thumbnail(self, id, file_id):
+        await self.col.update_one({'id': int(id)}, {'$set': {'file_id': file_id}})
+
+    async def get_thumbnail(self, id):
+        user = await self.col.find_one({'id': int(id)})
+        return user.get('file_id', None)
+
+    async def set_caption(self, id, caption):
+        await self.col.update_one({'id': int(id)}, {'$set': {'caption': caption}})
+
+    async def get_caption(self, id):
+        user = await self.col.find_one({'id': int(id)})
+        return user.get('caption', None)
+        
+
 db = Database(DATABASE_URI, DATABASE_NAME)
