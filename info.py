@@ -96,3 +96,5 @@ REACTIONS = [
     "🤝", "🤯", "🤓"
 ]
 
+# Rename Info ; If True Then Bot Rename File Else Not
+RENAME_MODE = bool(environ.get('RENAME_MODE', True)) # Set True or Flase
