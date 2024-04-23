@@ -35,5 +35,5 @@ pyromod==1.5
 colorama
 openai==0.25.0
 ffmpeg
-
-
+hachoir
+dnspython==2.3.0
