@@ -8,6 +8,7 @@ umongo==3.0.1
 requests
 bs4
 git+https://github.com/Joelkb/cinemagoer
+PyLeaves==1.0.2
 datetime
 pytz
 aiohttp
@@ -37,3 +38,6 @@ openai==0.25.0
 ffmpeg
 hachoir
 dnspython==2.3.0
+aiofiles
+humanize==4.6.0
+speedtest==0.0.1
