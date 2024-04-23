@@ -25,6 +25,15 @@ wget
 youtube-search-python
 youtube-search
 yt-dlp==2024.4.09
-
+python-decouple
+ffmpeg-python>=0.2.0
+ytthumb
+jinja2
+apscheduler
+pyshorteners
+pyromod==1.5
+colorama
+openai==0.25.0
+ffmpeg
 
 
