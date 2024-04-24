@@ -631,8 +631,7 @@ async def lock_chat(Client, message):
             }
        await Client.set_chat_permissions(chat_id,ChatPermissions(can_send_messages=True,can_send_media_messages=True))
        await message.reply("Locked")
-    else:
-        print("Not admin")
+
 
 
    
