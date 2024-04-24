@@ -633,8 +633,12 @@ async def lock_chat(bot, message):
                 "can_send_other_messages": False,
                 "can_add_web_page_previews": False
             }
-       await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=True,can_send_media_messages=True))
-       await message.reply("Locked")
+       try:
+           await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=True,can_send_media_messages=True))
+           await message.reply("Locked")
+       except Exception as e:
+           await message.reply(str(e))
+           
 
 
 
