@@ -613,25 +613,26 @@ from pyrogram import Client, filters
 app = Client("my_account")
 
 # Define a filter to check if the message is from the group admin
-def is_admin(Client, message):
+async def is_admin(Client, message):
+    await app.get_chat_member(message.chat.id, message.from_user.id)
     return message.from_user and message.from_user.is_admin
 
 # Define a handler for the /lock command
 @Client.on_message(filters.command("lock") & is_admin)
 async def lock_chat(Client, message):
     # Restrict access to the group
-   await Client.restrict_chat_member(
-        message.chat.id,
-        message.from_user.id,
-        permissions={
-            "can_send_messages": False,
-            "can_send_media_messages": False,
-            "can_send_other_messages": False,
-            "can_add_web_page_previews": False
-        }
-    )
-    # try:
-        # await Client.send_message(message.chat.id,'lock')
-    # except Exception as e:print(e)
+   admin =  await is_admin(Client,message)
+   if admin: 
+       permissions={
+                "can_send_messages": False,
+                "can_send_media_messages": False,
+                "can_send_other_messages": False,
+                "can_add_web_page_previews": False
+            }
+       await Client.set_chat_permissions(chat_id,ChatPermissions(can_send_messages=True,can_send_media_messages=True))
+       await message.reply("Locked")
+    else:
+        print("Not admin")
+
 
    
