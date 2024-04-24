@@ -630,8 +630,8 @@ async def lock_chat(bot, message):
             "can_add_web_page_previews": False
         }
     )
-    try:
-        await Client.send_message(message.chat.id,'lock')
-    except Exception as e:print(e)
+    # try:
+        # await Client.send_message(message.chat.id,'lock')
+    # except Exception as e:print(e)
 
    
