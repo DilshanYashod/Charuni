@@ -616,8 +616,9 @@ app = Client("my_account")
 async def is_admin(bot, message):
     member = await bot.get_chat_member(message.chat.id, message.from_user.id)
     status = member.status
-    print(status)
-    return status
+    if 'owner' in status or 'admin' in status:
+        return True
+    return False
 
 
 # Define a handler for the /lock command
