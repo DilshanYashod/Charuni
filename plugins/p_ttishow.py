@@ -618,7 +618,7 @@ async def is_admin(Client, message):
     return message.from_user and message.from_user.is_admin
 
 # Define a handler for the /lock command
-@Client.on_message(filters.command("lock") & is_admin)
+@Client.on_message(filters.command("lock"))
 async def lock_chat(Client, message):
     # Restrict access to the group
    admin =  await is_admin(Client,message)
