@@ -614,8 +614,10 @@ app = Client("my_account")
 
 # Define a filter to check if the message is from the group admin
 async def is_admin(bot, message):
-    await bot.get_chat_member(message.chat.id, message.from_user.id)
-    return message.from_user and message.from_user.is_admin
+    member = await bot.get_chat_member(message.chat.id, message.from_user.id)
+    print(member)
+    return member
+
 
 # Define a handler for the /lock command
 @Client.on_message(filters.command("lock"))
