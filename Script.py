@@ -92,7 +92,7 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
  ├ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
  ├ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
 ├ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>
- └Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b>""""
+ └Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b>"""
 
     LOG_TEXT_G = """#NewGroup
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
