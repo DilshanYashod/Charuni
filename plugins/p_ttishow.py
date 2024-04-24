@@ -613,7 +613,7 @@ from pyrogram import Client, filters
 app = Client("my_account")
 
 # Define a filter to check if the message is from the group admin
-async def is_admin(Client, message):
+def is_admin(Client, message):
     return message.from_user and message.from_user.is_admin
 
 # Define a handler for the /lock command
