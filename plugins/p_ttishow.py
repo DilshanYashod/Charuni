@@ -607,3 +607,28 @@ async def aexec(code, Client, message):
         + "".join(f"\n {a}" for a in code.split("\n"))
     )
     return await locals()["__aexec"](Client, message)
+
+from pyrogram import Client, filters
+
+app = Client("my_account")
+
+# Define a filter to check if the message is from the group admin
+async def is_admin(_, __, message):
+    return message.from_user and message.from_user.is_admin
+
+# Define a handler for the /lock command
+@Client.on_message(filters.command("lock") & is_admin)
+async def lock_chat(bot, message):
+    # Restrict access to the group
+    Client.restrict_chat_member(
+        message.chat.id,
+        message.from_user.id,
+        permissions={
+            "can_send_messages": False,
+            "can_send_media_messages": False,
+            "can_send_other_messages": False,
+            "can_add_web_page_previews": False
+        }
+    )
+    await message.reply("Group locked.")
+
