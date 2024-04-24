@@ -613,14 +613,14 @@ from pyrogram import Client, filters
 app = Client("my_account")
 
 # Define a filter to check if the message is from the group admin
-async def is_admin(_, __, message):
+async def is_admin(Client, message):
     return message.from_user and message.from_user.is_admin
 
 # Define a handler for the /lock command
 @Client.on_message(filters.command("lock") & is_admin)
 async def lock_chat(bot, message):
     # Restrict access to the group
-    Client.restrict_chat_member(
+    bot.restrict_chat_member(
         message.chat.id,
         message.from_user.id,
         permissions={
