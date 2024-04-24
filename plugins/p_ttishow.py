@@ -630,7 +630,6 @@ async def lock_chat(bot, message):
             "can_add_web_page_previews": False
         }
     )
+    await message.reply(f"**🌿 ꜱᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ ꜱᴏɴɢ 🌿...**")
+    
    
-    try:
-        await Client.send_message('lock')
-    except Exception as e:print(e)
