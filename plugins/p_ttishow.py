@@ -623,7 +623,7 @@ async def is_admin(bot, message):
 @Client.on_message(filters.command("lock"))
 async def lock_chat(bot, message):
     # Restrict access to the group
-   admin =  await is_admin(Client,message)
+   admin =  await is_admin(bot,message)
    if admin: 
        permissions={
                 "can_send_messages": False,
