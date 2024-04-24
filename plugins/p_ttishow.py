@@ -630,7 +630,7 @@ async def lock_chat(bot, message):
             "can_add_web_page_previews": False
         }
     )
-    await message.reply("Group locked")
+    await message.reply("locked...")
 try:
     await message.reply
 except Exception as e:print(e)
