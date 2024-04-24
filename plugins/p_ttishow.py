@@ -631,6 +631,6 @@ async def lock_chat(bot, message):
         }
     )
    
-try:
-    await Client.send_message('lock')
-except Exception as e:print(e)
+      try:
+          await Client.send_message('lock')
+      except Exception as e:print(e)
