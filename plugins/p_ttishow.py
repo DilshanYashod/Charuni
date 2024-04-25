@@ -616,6 +616,7 @@ app = Client("my_account")
 async def is_admin(bot, message):
     member = await bot.get_chat_member(message.chat.id, message.from_user.id)
     status = member.status
+    print(status)
     if 'owner' in str(status).lower() or 'admin' in str(status).lower():
         return True
     return False
