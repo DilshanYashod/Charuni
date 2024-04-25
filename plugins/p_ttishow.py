@@ -630,6 +630,7 @@ async def lock_chat(bot, message):
    if admin: 
        try:
            await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=False,can_send_media_messages=False))
+           await message.react(emoji="🍃")
            await message.reply("<b>Group Locked❗</b>")
        except Exception as e:
            await message.reply(str(e))
@@ -643,9 +644,7 @@ async def unlock_chat(bot, message):
        try:
            await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=True,can_send_media_messages=True))
            await message.react(emoji="🍃")
-         m=await message.reply("<b>Group Unlocked✅</b>")
-           await m.edit_text("done")
-           await asyncio.sleep(0.4)
+           await message.reply("<b>Group Unlocked✅</b>")
        except Exception as e:
            await message.reply(str(e))
 
