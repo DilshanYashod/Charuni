@@ -636,7 +636,7 @@ async def lock_chat(bot, message):
 
 
 @Client.on_message(filters.command("unlock"))
-async def lock_chat(bot, message):
+async def unlock_chat(bot, message):
     # Restrict access to the group
    admin =  await is_admin(bot,message)
    if admin: 
