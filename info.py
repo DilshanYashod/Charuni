@@ -93,7 +93,7 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
 REACTIONS = [
     "🔥", "❤️", "😍", "⚡", "😇",
     "🤩", "🎉", "🤗", "🤩", "😎",
-    "🤝", "🤯", "🤓"
+    "🤝", "🤯", "🤓", "😶"
 ]
 
 STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or Flase
