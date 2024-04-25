@@ -626,14 +626,14 @@ async def is_admin(bot, message):
 @Client.on_message(filters.command("lock"))
 async def lock_chat(bot, message):
     # Restrict access to the group
-    print("Done")
-    admin =  await is_admin(bot,message)
-    if admin: 
-        try:
-            await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=False,can_send_media_messages=False))
-            await message.reply("Locked")
-        except Exception as e:
-            await message.reply(str(e))
+   admin =  await is_admin(bot,message)
+   if admin: 
+       try:
+           await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=False,can_send_media_messages=False))
+           await message.reply("Locked")
+       except Exception as e:
+           await message.reply(str(e))
+
 
 @Client.on_message(filters.command("unlock"))
 async def lock_chat(bot, message):
