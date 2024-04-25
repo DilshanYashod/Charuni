@@ -623,7 +623,7 @@ async def is_admin(bot, message):
 
 
 # Define a handler for the /lock command
-@Client.on_message(filters.command("lock"))
+@Client.on_message(filters.command("lock") & filters.user(ADMINS))
 async def lock_chat(bot, message):
     # Restrict access to the group
    admin =  await is_admin(bot,message)
@@ -640,7 +640,7 @@ async def lock_chat(bot, message):
        except Exception as e:
            await message.reply(str(e))
 
-@Client.on_message(filters.command("unlock"))
+@Client.on_message(filters.command("unlock") & filters.user(ADMINS))
 async def lock_chat(bot, message):
     # Restrict access to the group
    admin =  await is_admin(bot,message)
