@@ -623,14 +623,14 @@ async def is_admin(bot, message):
 
 
 # Define a handler for the /lock command
-@Client.on_message(filters.command("lock"))
+@Client.on_message(filters.command("gmute"))
 async def lock_chat(bot, message):
     # Restrict access to the group
    admin =  await is_admin(bot,message)
    if admin: 
        try:
            await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=False,can_send_media_messages=False))
-           await message.reply("Locked")
+           await message.reply("Muted")
        except Exception as e:
            await message.reply(str(e))
 
