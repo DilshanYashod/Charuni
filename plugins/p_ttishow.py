@@ -623,35 +623,23 @@ async def is_admin(bot, message):
 
 
 # Define a handler for the /lock command
-@Client.on_message(filters.command("lock") & filters.user(ADMINS))
+@Client.on_message(filters.command("lock"))
 async def lock_chat(bot, message):
     # Restrict access to the group
     print("Done")
     admin =  await is_admin(bot,message)
     if admin: 
-        permissions={
-            "can_send_messages": False,
-            "can_send_media_messages": False,
-            "can_send_other_messages": False,
-            "can_add_web_page_previews": False
-        }
-    try:
-        await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=True,can_send_media_messages=True))
-        await message.reply("Locked")
-    except Exception as e:
-        await message.reply(str(e))
+        try:
+            await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=False,can_send_media_messages=False))
+            await message.reply("Locked")
+        except Exception as e:
+            await message.reply(str(e))
 
-@Client.on_message(filters.command("unlock") & filters.user(ADMINS))
+@Client.on_message(filters.command("unlock"))
 async def lock_chat(bot, message):
     # Restrict access to the group
    admin =  await is_admin(bot,message)
    if admin: 
-       permissions={
-                "can_send_messages": True,
-                "can_send_media_messages": True,
-                "can_send_other_messages": True,
-                "can_add_web_page_previews": True
-            }
        try:
            await bot.set_chat_permissions(message.chat.id,ChatPermissions(can_send_messages=True,can_send_media_messages=True))
            await message.reply("Unlocked")
