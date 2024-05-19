@@ -32,7 +32,7 @@ async def start(client, message):
                     InlineKeyboardButton('🔋 ʜᴇʟᴘꜱ 🔋', callback_data='help'),
                     InlineKeyboardButton('💌 ɪᴛᴢᴍᴇ 💌 ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
+                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=https://t.me/Movies_SL_Updates)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_text("<b>ᴄᴏɴɴᴇᴄᴛᴇᴅ ɪɴꜰɪɴɪᴛʏ ᴠᴇʀꜱᴇ 🔰</b>")
@@ -72,7 +72,7 @@ async def start(client, message):
                     InlineKeyboardButton('🔋 ʜᴇʟᴘꜱ 🔋', callback_data='help'),
                     InlineKeyboardButton('💌 ɪᴛᴢᴍᴇ 💌 ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
+                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=https://t.me/Movies_SL_Updates)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_text("<b>ᴄᴏɴɴᴇᴄᴛᴇᴅ ɪɴꜰɪɴɪᴛʏ ᴠᴇʀꜱᴇ 🔰</b>")
@@ -132,7 +132,7 @@ async def start(client, message):
                     InlineKeyboardButton('🔋 ʜᴇʟᴘꜱ 🔋', callback_data='help'),
                     InlineKeyboardButton('💌 ɪᴛᴢᴍᴇ 💌 ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=CHNL_LNK)
+                    InlineKeyboardButton('🌳 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🌳', url=https://t.me/Movies_SL_Updates)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -183,10 +183,10 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
-                          InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
+                          InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=https://t.me/+hLdodxl4g4Y3OWQ1),
+                          InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=https://t.me/FilmZone_World)
                        ],[
-                          InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Nimsar_a")
+                          InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Mr_alex_id")
                          ]
                         ]
                     )
@@ -202,10 +202,10 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
-                          InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
+                          InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=https://t.me/+hLdodxl4g4Y3OWQ1),
+                          InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=https://t.me/FilmZone_World)
                        ],[
-                          InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Nimsar_a")
+                          InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Mr_alex_id")
                          ]
                         ]
                     )
@@ -321,10 +321,10 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
-                      InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
+                      InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=https://t.me/+hLdodxl4g4Y3OWQ1),
+                      InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=https://t.me/FilmZone_World)
                    ],[
-                      InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/nimsar_a")
+                      InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Mr_alex_id")
                      ]
                     ]
                 )
@@ -375,10 +375,10 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=GRP_LNK),
-              InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=CHNL_LNK)
+              InlineKeyboardButton('🔰 ꜱᴜᴘᴘᴏʀᴛ 🔰', url=https://t.me/+hLdodxl4g4Y3OWQ1),
+              InlineKeyboardButton('💌 ᴜᴘᴅᴀᴛᴇꜱ 💌', url=https://t.me/FilmZone_World)
            ],[
-              InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Nimsar_a")
+              InlineKeyboardButton("🌿 ᴍᴀꜱᴛᴇʀ 🌿", url="t.me/Mr_alex_id")
              ]
             ]
         )
